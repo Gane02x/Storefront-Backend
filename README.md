@@ -46,4 +46,5 @@ To run all test run `npm run test`
 ## Authors
 
 Gabor Nemeth
+
 Udacity
