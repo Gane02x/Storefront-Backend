@@ -6,12 +6,20 @@ const store = new Orders();
 
 const index = async (req: Request, res: Response) => {
   const orders = await store.index();
-  res.json(orders);
+    try {
+    res.json(orders);
+  } catch (error) {
+    res.json(error);
+  }
 };
 
 const show = async (req: Request, res: Response) => {
   const order = await store.show(req.params.id);
-  res.json(order);
+    try {
+    res.json(order);
+  } catch (error) {
+    res.json(error);
+  }
 };
 
 const create = async (req: Request, res: Response) => {
