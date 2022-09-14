@@ -11,7 +11,7 @@ describe("Order Handler", () => {
     const response = await request(server).get("/orders");
     expect(response.status).toBe(401);
   });
-  it("should return a specific racket when calling GET /orders/:id without token", async () => {
+  it("should return a error when calling GET /orders/:id without token", async () => {
     const response = await request(server).get("/orders/1");
     expect(response.status).toBe(401);
   });
