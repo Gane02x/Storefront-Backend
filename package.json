@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon src/server.ts",
     "test:watch": "jest --watch",
-    "test": "ENV=test db-migrate reset --env test && db-migrate reset && db-migrate up --env test && db-migrate up && jest",
+    "test": "ENV=test db-migrate reset --env test && db-migrate reset && db-migrate up --env test && db-migrate up && jasmine-ts",
     "migrate": "db-migrate --env test up && db-migrate up",
     "db": "docker-compose up",
     "tsc": "tsc"
