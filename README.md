@@ -39,6 +39,8 @@ Make sure that the database.json file matches your environmental variables
 3. To migrate all tables to the database run `npm run migrate`
 4. Run `npm run start` to run the server
 
+- The Database should be running on default at Port `5432`
+
 ## Running the tests
 
 To run all test run `npm run test`
