@@ -6,12 +6,20 @@ const store = new TennisRacketStore();
 
 const index = async (_req: Request, res: Response) => {
   const rackets = await store.index();
-  res.json(rackets);
+  try {
+    res.json(rackets);
+  } catch (error) {
+    res.json(error);
+  }
 };
 
 const show = async (req: Request, res: Response) => {
   const racket = await store.show(req.params.id);
-  res.json(racket);
+   try {
+    res.json(racket);
+  } catch (error) {
+    res.json(error);
+  }
 };
 
 const create = async (req: Request, res: Response) => {
