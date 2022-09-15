@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
-const authorization = (req: Request, res: Response, next: NextFunction) => {
+export const authorization = (req: Request, res: Response, next: NextFunction) => {
   if (process.env.ENV !== "test") {
     try {
       const authorizationHeader = req.headers
@@ -15,4 +15,4 @@ const authorization = (req: Request, res: Response, next: NextFunction) => {
   }
   next();
 };
-export default authorization;
+
